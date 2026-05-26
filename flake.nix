@@ -26,6 +26,10 @@
           inherit version;
           acceleration = "rocm";
         };
+        ollama-cuda = final.callPackage ./nix/package.nix {
+          inherit version;
+          acceleration = "cuda";
+        };
       };
 
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
