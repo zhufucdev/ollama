@@ -25,7 +25,7 @@ func newImageProcessor(c fs.Config) ImageProcessor {
 	// Token limits from reference: min=40, max=560 output tokens after pooling.
 	// Convert to pixel counts: tokens * nMerge^2 * patchSize^2
 	minTokens := 40
-	maxTokens := 560
+	maxTokens := 1120
 	patchArea := patchSize * patchSize * nMerge * nMerge
 	minPixels := minTokens * patchArea
 	maxPixels := maxTokens * patchArea
