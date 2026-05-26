@@ -22,10 +22,10 @@ func newImageProcessor(c fs.Config) ImageProcessor {
 	nMerge := int(c.Uint("vision.projector.scale_factor", 3))
 	numChannels := int(c.Uint("vision.num_channels", 3))
 
-	// Token limits from reference: min=40, max=280 output tokens after pooling.
+	// Token limits from reference: min=40, max=560 output tokens after pooling.
 	// Convert to pixel counts: tokens * nMerge^2 * patchSize^2
 	minTokens := 40
-	maxTokens := 280
+	maxTokens := 560
 	patchArea := patchSize * patchSize * nMerge * nMerge
 	minPixels := minTokens * patchArea
 	maxPixels := maxTokens * patchArea
