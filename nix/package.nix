@@ -145,7 +145,7 @@ goBuild (finalAttrs: {
 
   src = ../.;
 
-  vendorHash = "sha256-Lc1Ktdqtv2VhJQssk8K1UOimeEjVNvDWePE9WkamCos=";
+  vendorHash = "sha256-lZdGzGb9xRjTm1Rm7/wHjqM490gLznLEndmb4mNbCX0=";
   proxyVendor = true;
 
   env =
